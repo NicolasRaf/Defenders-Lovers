@@ -1,9 +1,12 @@
-[gd_scene load_steps=3 format=3 uid="uid://cupv0hc2jmxbj"]
+[gd_scene load_steps=4 format=3 uid="uid://cupv0hc2jmxbj"]
 
 [ext_resource type="PackedScene" uid="uid://b27n8i3012nih" path="res://scenes/player.tscn" id="1_xkf3l"]
 [ext_resource type="PackedScene" uid="uid://bg418oocjac22" path="res://scenes/enemySpawner.tscn" id="2_tga13"]
 
+[sub_resource type="GDScript" id="GDScript_hl5v4"]
+
 [node name="World" type="Node2D"]
+script = SubResource("GDScript_hl5v4")
 
 [node name="ColorRect2" type="ColorRect" parent="."]
 offset_left = 25.0
@@ -15,3 +18,12 @@ offset_bottom = 19.0
 
 [node name="EnemySpawner" parent="." instance=ExtResource("2_tga13")]
 position = Vector2(-7, -37)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(2, 2)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+collision_mask = 0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PackedVector2Array(-327, -178, -327, 190, -313, 171, -314, -173, 308, -173, 307, 173, -310, 179, -329, 195, 328, 196, 324, -191, -329, -196)

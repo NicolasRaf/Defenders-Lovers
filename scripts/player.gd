@@ -1,4 +1,5 @@
 extends CharacterBody2D
+class_name Player
 
 const speed : int = 300
 var friction: float = 0.2
@@ -12,7 +13,7 @@ func _ready():
 
 func _physics_process(delta) -> void:
 	$Node2D.look_at(get_global_mouse_position())
-	if Input.is_action_pressed("ui_accept") and canShot:
+	if Input.is_action_pressed("shot") and canShot:
 		_shot()
 	
 	_move()
@@ -43,5 +44,7 @@ func _shot() -> void:
 	
 	get_parent().add_child(_bullet)
 	_bullet.position = $Node2D/Crosshair.global_position 
-	
 	_bullet.velocity = get_global_mouse_position() - _bullet.position
+	canShot = false
+	await get_tree().create_timer(0.5).timeout
+	canShot = true

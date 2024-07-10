@@ -1,7 +1,8 @@
-[gd_scene load_steps=15 format=3 uid="uid://dgi4ipffxyhgg"]
+[gd_scene load_steps=17 format=3 uid="uid://dgi4ipffxyhgg"]
 
 [ext_resource type="Script" path="res://scripts/enemy.gd" id="1_tvhx7"]
 [ext_resource type="Texture2D" uid="uid://cqpotglp4n0lh" path="res://assets/enemys/slime spritesheet calciumtrice.png" id="2_t7u86"]
+[ext_resource type="PackedScene" uid="uid://b7drrqjk3ygcw" path="res://scenes/killzone.tscn" id="3_k3nys"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ky2nt"]
 atlas = ExtResource("2_t7u86")
@@ -82,9 +83,14 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_njdm1"]
-size = Vector2(20, 15)
+size = Vector2(14, 11.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5sxwo"]
+size = Vector2(18, 14)
 
 [node name="enemy" type="CharacterBody2D"]
+collision_layer = 2
+collision_mask = 4
 script = ExtResource("1_tvhx7")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -92,5 +98,14 @@ scale = Vector2(1.4, 1.4)
 sprite_frames = SubResource("SpriteFrames_4pd8x")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 0.5)
+position = Vector2(0, 1.25)
 shape = SubResource("RectangleShape2D_njdm1")
+
+[node name="Killzone" parent="." instance=ExtResource("3_k3nys")]
+collision_layer = 2
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone"]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_5sxwo")
+debug_color = Color(0.988235, 0, 0.101961, 0.419608)
