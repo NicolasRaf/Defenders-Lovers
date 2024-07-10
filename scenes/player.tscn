@@ -18,3 +18,8 @@ shape = SubResource("RectangleShape2D_b4k68")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(2, 2)
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="Crosshair" type="Marker2D" parent="Node2D"]
+position = Vector2(29, 0)
