@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bgoc2j850mflg"
-path="res://.godot/imported/Run.png-9715f186956a288539da75462b4fb642.ctex"
+uid="uid://8riiut50624"
+path="res://.godot/imported/overworld_tileset_grass.png-151393890b203d9eab9b86c21737e88a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/1/Run.png"
-dest_files=["res://.godot/imported/Run.png-9715f186956a288539da75462b4fb642.ctex"]
+source_file="res://assets/map/overworld_tileset_grass.png"
+dest_files=["res://.godot/imported/overworld_tileset_grass.png-151393890b203d9eab9b86c21737e88a.ctex"]
 
 [params]
 
