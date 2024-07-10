@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cuucs4xw5ouq5"
-path="res://.godot/imported/Jump.png-0d744d6302b533a5e4a0aaf948cdf15a.ctex"
+uid="uid://cqpotglp4n0lh"
+path="res://.godot/imported/slime spritesheet calciumtrice.png-850b32dd04dd6ab302c465d20fcd5144.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/1/Jump.png"
-dest_files=["res://.godot/imported/Jump.png-0d744d6302b533a5e4a0aaf948cdf15a.ctex"]
+source_file="res://assets/enemys/slime spritesheet calciumtrice.png"
+dest_files=["res://.godot/imported/slime spritesheet calciumtrice.png-850b32dd04dd6ab302c465d20fcd5144.ctex"]
 
 [params]
 
