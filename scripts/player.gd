@@ -4,16 +4,22 @@ const speed : int = 300
 var friction: float = 0.2
 var acceleration: float = 0.2
 var health : int = 5
+var bulletPath : PackedScene =  preload("res://scenes/bullet.tscn")
+var canShot = true
 
 func _ready():
 	Global.Player = self;
 
 func _physics_process(delta) -> void:
+	$Node2D.look_at(get_global_mouse_position())
+	if Input.is_action_pressed("ui_accept") and canShot:
+		_shot()
+	
 	_move()
 	move_and_slide()
 	
 
-func _move():
+func _move() -> void:
 
 	## Recebe o input do player e da um valor positivo ou negativo para direção
 	var _direction : Vector2 = Vector2(
@@ -32,4 +38,10 @@ func _move():
 	
 	velocity = _direction.normalized() * speed 
 	
+func _shot() -> void:
+	var _bullet = bulletPath.instantiate()
 	
+	get_parent().add_child(_bullet)
+	_bullet.position = $Node2D/Crosshair.global_position 
+	
+	_bullet.velocity = get_global_mouse_position() - _bullet.position
