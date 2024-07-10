@@ -1,9 +1,12 @@
 extends CharacterBody2D
+
 const speed : int = 300
 var friction: float = 0.2
 var acceleration: float = 0.2
 var health : int = 5
 
+func _ready():
+	Global.Player = self;
 
 func _physics_process(delta) -> void:
 	_move()
