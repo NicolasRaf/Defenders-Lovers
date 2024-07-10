@@ -1,0 +1,74 @@
+[gd_scene load_steps=4 format=3 uid="uid://ckreaucox1dvb"]
+
+[ext_resource type="FontFile" uid="uid://due786ehbt6wf" path="res://assets/fonts/Stitch-'n School.ttf" id="1_bbgsk"]
+[ext_resource type="Script" path="res://start.gd" id="2_hicvu"]
+[ext_resource type="Script" path="res://scripts/exit.gd" id="3_tcao2"]
+
+[node name="titlescreen" type="CanvasLayer"]
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -337.0
+offset_top = -209.0
+offset_right = 358.0
+offset_bottom = -120.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.92549, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.92549, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_bbgsk")
+theme_override_font_sizes/font_size = 94
+text = "DEFENDERS LOVERS"
+
+[node name="start" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.496
+anchor_right = 0.5
+anchor_bottom = 0.496
+offset_left = -87.0
+offset_top = 34.88
+offset_right = 87.0
+offset_bottom = 108.88
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0, 0.898039, 0, 1)
+theme_override_fonts/font = ExtResource("1_bbgsk")
+theme_override_font_sizes/font_size = 54
+text = "START
+"
+script = ExtResource("2_hicvu")
+
+[node name="exit" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.559
+anchor_right = 0.5
+anchor_bottom = 0.559
+offset_left = -90.0
+offset_top = 91.52
+offset_right = 84.0
+offset_bottom = 165.52
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_colors/font_color = Color(0.929715, 0.929715, 0.929715, 1)
+theme_override_colors/font_pressed_color = Color(0, 0.898039, 0, 1)
+theme_override_fonts/font = ExtResource("1_bbgsk")
+theme_override_font_sizes/font_size = 54
+text = "EXIT
+"
+script = ExtResource("3_tcao2")
+
+[connection signal="pressed" from="start" to="start" method="_on_pressed"]
+[connection signal="pressed" from="exit" to="start" method="_on_exit_pressed"]
