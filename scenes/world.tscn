@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://cupv0hc2jmxbj"]
+[gd_scene load_steps=3 format=3 uid="uid://cupv0hc2jmxbj"]
 
 [ext_resource type="PackedScene" uid="uid://b27n8i3012nih" path="res://scenes/player.tscn" id="1_xkf3l"]
+[ext_resource type="PackedScene" path="res://scenes/enemysspawner.tscn" id="2_tga13"]
 
 [node name="World" type="Node2D"]
 
@@ -11,3 +12,6 @@ offset_right = 65.0
 offset_bottom = 19.0
 
 [node name="Player" parent="." instance=ExtResource("1_xkf3l")]
+
+[node name="Enemysspawner" parent="." instance=ExtResource("2_tga13")]
+position = Vector2(-7, -37)
