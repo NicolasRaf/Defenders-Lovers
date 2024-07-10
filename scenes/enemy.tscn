@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://dgi4ipffxyhgg"]
+[gd_scene load_steps=6 format=3 uid="uid://dgi4ipffxyhgg"]
 
 [ext_resource type="Texture2D" uid="uid://bvid60vuf413i" path="res://assets/1/Fall.png" id="1_aa43t"]
+[ext_resource type="Script" path="res://scripts/enemy.gd" id="1_tvhx7"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_yjsov"]
 atlas = ExtResource("1_aa43t")
@@ -21,6 +22,7 @@ animations = [{
 size = Vector2(20, 24)
 
 [node name="enemy" type="CharacterBody2D"]
+script = ExtResource("1_tvhx7")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_4pd8x")
