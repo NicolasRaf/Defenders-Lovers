@@ -27,3 +27,4 @@ func updateClock() -> void:
 			
 func updateMessage() -> void:
 	clockLabel.text = "Passed Time: " + str(minutes) + ":" + str(seconds) if seconds > 9 else "Passed Time: " + str(minutes) + ":0" + str(seconds)
+	Global.textTime = str(minutes) + ":" + str(seconds) if seconds > 9 else "Passed Time: " + str(minutes) + ":0" + str(seconds) 

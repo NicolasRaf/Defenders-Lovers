@@ -18,7 +18,7 @@ bg_color = Color(0.6, 0.6, 0.6, 0)
 bg_color = Color(0.6, 0.6, 0.6, 0)
 
 [resource]
-Button/colors/font_focus_color = Color(0.976471, 0, 0, 0.713726)
+Button/colors/font_focus_color = Color(0.939752, 0.0295544, 0.465823, 0.713726)
 Button/colors/icon_focus_color = Color(0.976471, 0, 0, 0.713726)
 Button/fonts/font = ExtResource("1_qd0rs")
 Button/styles/disabled = SubResource("StyleBoxFlat_8f67o")

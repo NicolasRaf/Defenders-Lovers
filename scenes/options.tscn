@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://bnvdjymses3ns"]
+[gd_scene load_steps=5 format=3 uid="uid://bnvdjymses3ns"]
 
 [ext_resource type="Script" path="res://scripts/options.gd" id="1_m3kat"]
 [ext_resource type="AudioStream" uid="uid://di2l1brgvhqa5" path="res://assets/song/'Defense Matrix' by Vyra 🇧🇪 _ Retro Music (No Copyright) 📍 (128).mp3" id="2_cg33x"]
 [ext_resource type="Theme" uid="uid://bh5uhv7nypu4m" path="res://assets/fonts/buttons.tres" id="3_uiw24"]
+[ext_resource type="Texture2D" uid="uid://8267qhb74k6r" path="res://assets/IU/Moldura2-removebg.png" id="4_dql34"]
 
 [node name="Options" type="Control"]
 z_index = 5
@@ -29,7 +30,7 @@ offset_right = 123.5
 offset_bottom = 75.5
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.59546, 0.255269, 0.338518, 1)
+color = Color(0.555897, 0.138198, 0.150374, 1)
 
 [node name="VolSlider" type="HSlider" parent="."]
 z_index = 5
@@ -111,6 +112,13 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
-color = Color(0.0353462, 0.0353462, 0.0353462, 0.745098)
+color = Color(0.0352941, 0.0352941, 0.0352941, 0.780392)
+
+[node name="Moldura2-removebg" type="Sprite2D" parent="."]
+process_mode = 4
+z_index = 5
+position = Vector2(636, 359)
+scale = Vector2(0.455385, 0.38)
+texture = ExtResource("4_dql34")
 
 [connection signal="pressed" from="Back" to="." method="_on_back_pressed"]

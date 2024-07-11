@@ -4,6 +4,8 @@ extends Area2D
 @onready var lifebar : TextureProgressBar = get_node("Lifebar")
 var damageTaken : int = 10
 
+func _process(delta) -> void:
+	Global.lifeCastle = lifebar.value
 
 func _ready():
 	Global.CastleReference = self
@@ -15,6 +17,5 @@ func _on_body_entered(body):
 
 func takeDamage() -> void:
 	var tween : Tween = get_tree().create_tween()
-	tween.tween_property(lifebar,"value",lifebar.value - damageTaken,0.5).set_trans(Tween.TRANS_ELASTIC)
-	tween.tween_property(PosDaamge,"size",Vector2(PosDaamge.size.x - 23, 14), 0.2).set_trans(Tween.TRANS_ELASTIC)
-	
+	tween.tween_property(lifebar,"value",lifebar.value - damageTaken,0.5)
+	tween.tween_property(PosDaamge,"size",Vector2(PosDaamge.size.x - 23, 13), 0.1)
