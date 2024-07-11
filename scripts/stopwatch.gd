@@ -8,6 +8,7 @@ var seconds : int = 0
 
 func _ready():
 	timer.start()
+	Global.time = self;
 
 func _process(delta):
 	if seconds > 59:
