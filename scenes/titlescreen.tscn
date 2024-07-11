@@ -1,10 +1,19 @@
-[gd_scene load_steps=3 format=3 uid="uid://ckreaucox1dvb"]
+[gd_scene load_steps=6 format=3 uid="uid://ckreaucox1dvb"]
 
 [ext_resource type="Script" path="res://scripts/titlescreen.gd" id="1_aralp"]
 [ext_resource type="FontFile" uid="uid://due786ehbt6wf" path="res://assets/fonts/Stitch-'n School.ttf" id="1_bbgsk"]
+[ext_resource type="Texture2D" uid="uid://chyn7vf2748jw" path="res://assets/fonts/2.jpg" id="2_coyn6"]
+[ext_resource type="Theme" uid="uid://bh5uhv7nypu4m" path="res://assets/fonts/buttons.tres" id="3_gm1t1"]
+[ext_resource type="PackedScene" uid="uid://bnvdjymses3ns" path="res://scenes/options.tscn" id="5_ofsq0"]
 
 [node name="titlescreen" type="CanvasLayer"]
 script = ExtResource("1_aralp")
+
+[node name="Background" type="Sprite2D" parent="."]
+self_modulate = Color(0.523781, 0.523781, 0.523781, 1)
+position = Vector2(641.5, 388)
+scale = Vector2(1.24902, 0.765625)
+texture = ExtResource("2_coyn6")
 
 [node name="Label" type="Label" parent="."]
 anchors_preset = 8
@@ -12,10 +21,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -337.0
-offset_top = -209.0
-offset_right = 358.0
-offset_bottom = -120.0
+offset_left = -528.0
+offset_top = -256.0
+offset_right = 558.0
+offset_bottom = -158.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
@@ -23,50 +32,64 @@ theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_shadow_color = Color(0.92549, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0.92549, 0, 0, 1)
 theme_override_fonts/font = ExtResource("1_bbgsk")
-theme_override_font_sizes/font_size = 94
+theme_override_font_sizes/font_size = 87
 text = "DEFENDERS LOVERS"
 
-[node name="start" type="Button" parent="."]
-anchors_preset = -1
+[node name="Buttons" type="VBoxContainer" parent="."]
+anchors_preset = 8
 anchor_left = 0.5
-anchor_top = 0.496
+anchor_top = 0.5
 anchor_right = 0.5
-anchor_bottom = 0.496
-offset_left = -87.0
-offset_top = 34.88
-offset_right = 87.0
-offset_bottom = 108.88
+anchor_bottom = 0.5
+offset_left = -119.0
+offset_top = -38.0
+offset_right = 119.0
+offset_bottom = 136.0
 grow_horizontal = 2
 grow_vertical = 2
+alignment = 1
+
+[node name="start" type="Button" parent="Buttons"]
+layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+theme = ExtResource("3_gm1t1")
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_pressed_color = Color(0, 0.898039, 0, 1)
 theme_override_fonts/font = ExtResource("1_bbgsk")
-theme_override_font_sizes/font_size = 54
+theme_override_font_sizes/font_size = 44
 text = "START
 "
 
-[node name="exit" type="Button" parent="."]
-anchors_preset = -1
-anchor_left = 0.5
-anchor_top = 0.559
-anchor_right = 0.5
-anchor_bottom = 0.559
-offset_left = -90.0
-offset_top = 91.52
-offset_right = 84.0
-offset_bottom = 165.52
-grow_horizontal = 2
-grow_vertical = 2
+[node name="HSeparator" type="HSeparator" parent="Buttons"]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+
+[node name="options" type="Button" parent="Buttons"]
+layout_mode = 2
+theme = ExtResource("3_gm1t1")
+theme_override_font_sizes/font_size = 44
+text = "OPTIONS"
+
+[node name="HSeparator2" type="HSeparator" parent="Buttons"]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+
+[node name="exit" type="Button" parent="Buttons"]
+layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+theme = ExtResource("3_gm1t1")
 theme_override_colors/font_color = Color(0.929715, 0.929715, 0.929715, 1)
 theme_override_colors/font_pressed_color = Color(0, 0.898039, 0, 1)
 theme_override_fonts/font = ExtResource("1_bbgsk")
-theme_override_font_sizes/font_size = 54
+theme_override_font_sizes/font_size = 44
 text = "EXIT
 "
 
-[connection signal="pressed" from="start" to="." method="_on_start_pressed"]
-[connection signal="pressed" from="exit" to="." method="_on_exit_pressed"]
+[node name="Options" parent="." instance=ExtResource("5_ofsq0")]
+visible = false
+
+[connection signal="pressed" from="Buttons/start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="Buttons/options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="Buttons/exit" to="." method="_on_exit_pressed"]
