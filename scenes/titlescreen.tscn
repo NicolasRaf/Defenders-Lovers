@@ -1,10 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://ckreaucox1dvb"]
+[gd_scene load_steps=5 format=3 uid="uid://ckreaucox1dvb"]
 
 [ext_resource type="Script" path="res://scripts/titlescreen.gd" id="1_aralp"]
 [ext_resource type="FontFile" uid="uid://due786ehbt6wf" path="res://assets/fonts/Stitch-'n School.ttf" id="1_bbgsk"]
 [ext_resource type="Texture2D" uid="uid://chyn7vf2748jw" path="res://assets/fonts/2.jpg" id="2_coyn6"]
 [ext_resource type="Theme" uid="uid://bh5uhv7nypu4m" path="res://assets/fonts/buttons.tres" id="3_gm1t1"]
-[ext_resource type="PackedScene" uid="uid://bnvdjymses3ns" path="res://scenes/options.tscn" id="5_ofsq0"]
 
 [node name="titlescreen" type="CanvasLayer"]
 script = ExtResource("1_aralp")
@@ -87,9 +86,6 @@ theme_override_fonts/font = ExtResource("1_bbgsk")
 theme_override_font_sizes/font_size = 44
 text = "EXIT
 "
-
-[node name="Options" parent="." instance=ExtResource("5_ofsq0")]
-visible = false
 
 [connection signal="pressed" from="Buttons/start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="Buttons/options" to="." method="_on_options_pressed"]
