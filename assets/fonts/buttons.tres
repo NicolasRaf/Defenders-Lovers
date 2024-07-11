@@ -1,0 +1,27 @@
+[gd_resource type="Theme" load_steps=7 format=3 uid="uid://bh5uhv7nypu4m"]
+
+[ext_resource type="FontFile" uid="uid://due786ehbt6wf" path="res://assets/fonts/Stitch-'n School.ttf" id="1_qd0rs"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8f67o"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sxkyd"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d7oyg"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p7oeb"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_loqbj"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[resource]
+Button/colors/font_focus_color = Color(0.976471, 0, 0, 0.713726)
+Button/fonts/font = ExtResource("1_qd0rs")
+Button/styles/disabled = SubResource("StyleBoxFlat_8f67o")
+Button/styles/focus = SubResource("StyleBoxFlat_sxkyd")
+Button/styles/hover = SubResource("StyleBoxFlat_d7oyg")
+Button/styles/normal = SubResource("StyleBoxFlat_p7oeb")
+Button/styles/pressed = SubResource("StyleBoxFlat_loqbj")
