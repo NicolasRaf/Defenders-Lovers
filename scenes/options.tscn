@@ -51,6 +51,7 @@ value = 0.8
 
 [node name="Volume" type="Label" parent="VolSlider"]
 z_index = 5
+layout_mode = 0
 offset_left = -79.0
 offset_top = -5.0
 offset_right = -24.0
