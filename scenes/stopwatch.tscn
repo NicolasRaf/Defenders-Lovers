@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://d3ar40m4c5fu0"]
+
+[ext_resource type="Script" path="res://scripts/stopwatch.gd" id="1_goru6"]
+[ext_resource type="FontFile" uid="uid://due786ehbt6wf" path="res://assets/fonts/Stitch-'n School.ttf" id="2_o4i40"]
+
+[node name="Stopwatch" type="CanvasLayer"]
+script = ExtResource("1_goru6")
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="Clock" type="Label" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -116.5
+offset_right = 116.5
+offset_bottom = 29.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("2_o4i40")
+theme_override_font_sizes/font_size = 21
+text = "Passed Time: 0:00"
+uppercase = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

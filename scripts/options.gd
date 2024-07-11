@@ -6,6 +6,7 @@ extends Control
 
 func _ready():
 	volSlider.grab_focus()
+	
 
 func _process(delta):
 	var _windowMode = 3 if fullscreenButton.button_pressed == true else 2
