@@ -1,0 +1,67 @@
+[gd_scene load_steps=5 format=3 uid="uid://dgtsoi5um8ccs"]
+
+[ext_resource type="Texture2D" uid="uid://cj653o3v2i44" path="res://assets/map/castle/castle/castle.png" id="1_h52q3"]
+[ext_resource type="Script" path="res://scripts/castle.gd" id="1_np3ig"]
+
+[sub_resource type="Gradient" id="Gradient_24681"]
+offsets = PackedFloat32Array(0, 0.339623, 0.509434, 0.990566)
+colors = PackedColorArray(0.987382, 0, 0.29834, 1, 0.753367, 1.44392e-07, 0.400891, 1, 0.773926, 0.000127643, 0.659399, 1, 0.886275, 0, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_7xnig"]
+gradient = SubResource("Gradient_24681")
+width = 224
+height = 14
+
+[node name="Castle" type="Area2D"]
+collision_mask = 6
+script = ExtResource("1_np3ig")
+
+[node name="Castle" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_h52q3")
+
+[node name="AreaCollider" type="CollisionPolygon2D" parent="."]
+visible = false
+scale = Vector2(0.5, 0.5)
+polygon = PackedVector2Array(-240, 204, -241, 96, -216, 49, -194, 92, -190, 122, -161, 120, -158, 50, -135, 52, -135, -8, -113, -56, -88, -16, -88, 50, -58, 52, -59, -33, -44, -34, -42, -130, -7, -205, 36, -130, 33, -31, 59, -31, 60, 48, 83, 49, 82, -15, 108, -56, 134, -12, 132, 49, 157, 49, 157, 115, 192, 113, 193, 90, 217, 51, 243, 94, 241, 207)
+
+[node name="Heart" type="Label" parent="."]
+offset_left = -45.0
+offset_top = -5.0
+offset_right = 46.0
+offset_bottom = 86.0
+theme_override_font_sizes/font_size = 66
+text = "❤"
+
+[node name="Lifebar" type="TextureProgressBar" parent="."]
+offset_left = -113.0
+offset_top = -140.0
+offset_right = 113.0
+offset_bottom = -124.0
+step = 0.01
+value = 100.0
+texture_progress = SubResource("GradientTexture2D_7xnig")
+
+[node name="PhysicalCollider" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="PhysicalCollider"]
+visible = false
+scale = Vector2(0.5, 0.5)
+polygon = PackedVector2Array(-240, 204, -241, 96, -216, 49, -194, 92, -190, 122, -161, 120, -158, 50, -135, 52, -135, -8, -113, -56, -88, -16, -88, 50, -58, 52, -59, -33, -44, -34, -42, -130, -7, -205, 36, -130, 33, -31, 59, -31, 60, 48, 83, 49, 82, -15, 108, -56, 134, -12, 132, 49, 157, 49, 157, 115, 192, 113, 193, 90, 217, 51, 243, 94, 241, 207)
+
+[node name="PosDaamge" type="ColorRect" parent="."]
+z_index = -1
+offset_left = -113.0
+offset_top = -140.0
+offset_right = 111.0
+offset_bottom = -126.0
+
+[node name="BarBG" type="ColorRect" parent="."]
+z_index = -2
+offset_left = -115.0
+offset_top = -142.0
+offset_right = 113.0
+offset_bottom = -123.0
+color = Color(0, 0, 0, 1)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

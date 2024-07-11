@@ -46,5 +46,5 @@ func _shot() -> void:
 	_bullet.position = $Node2D/Crosshair.global_position 
 	_bullet.velocity = get_global_mouse_position() - _bullet.position
 	canShot = false
-	await get_tree().create_timer(0.5).timeout
+	await get_tree().create_timer(0.3).timeout
 	canShot = true
