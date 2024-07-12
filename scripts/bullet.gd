@@ -10,5 +10,7 @@ func _process(delta) -> void:
 	var colissionInfo = move_and_collide(velocity.normalized() * delta * speed)
 
 func _die() -> void:
-	await get_tree().create_timer(1).timeout
+	var _tween = get_tree().create_tween()
+	
+	await _tween.tween_property(self,"modulate",Color(0,0,0,0),1).set_trans(Tween.TRANS_BOUNCE).finished
 	queue_free()

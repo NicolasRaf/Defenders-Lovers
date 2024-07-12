@@ -3,7 +3,6 @@ extends Control
 @onready var killLabel : Label = get_node("ColorRect/Kill")
 @onready var timeLabel : Label= get_node("ColorRect/time")
 @onready var resetButton : Button = get_node("ColorRect/Reset")
-@onready var colorBack = $ColorRect/ColorBack
 var progress : float = 0.0
 
 
@@ -16,7 +15,6 @@ func _process(delta):
 		_pause = true
 		
 	if _pause and position.y <= -16 :
-		colorBack.visible = true 
 		get_tree().paused = true
 		
 	killLabel.text = "KILLS: " + str(Global.enemiesKilled)
