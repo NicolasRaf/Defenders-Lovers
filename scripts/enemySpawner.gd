@@ -20,6 +20,10 @@ func _process(delta):
 	$Timer.wait_time = currentWaitTime 
 
 func spawner():
+	var _keys_array : Array = Global.propriety_enemy.keys()
+	var _index = randi_range(0, _keys_array.size() - 1);
+	Global.speedEnemy = Global.propriety_enemy.get(_keys_array[_index]).get("speed");
+	Global.damageEnem = Global.propriety_enemy.get(_keys_array[_index]).get("damage");
 	var enemies: Array = [enemy0, enemy1, enemy2, enemy3];
 	var _randInd = randi_range(0, len(enemies) - 1);
 	var enemy = enemies[_randInd];
