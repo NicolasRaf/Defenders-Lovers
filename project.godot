@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Defenders Lovers"
-run/main_scene="res://scenes/world.tscn"
+run/main_scene="res://scenes/titlescreen.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
 boot_splash/bg_color=Color(0, 0, 0, 1)
 boot_splash/image="res://assets/Labiras_Logo.png"
@@ -21,6 +21,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 Global="*res://scripts/Global.gd"
+Musics="*res://scenes/musics.tscn"
 
 [display]
 

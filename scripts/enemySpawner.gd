@@ -12,7 +12,6 @@ func spawner():
 	enemy_instance.position = Vector2(randi_range(0,10),randi_range(0,500))
 	add_child(enemy_instance)
 	
-	
 	# Quando o contador de segundos atingir 29:
 	if Global.time.seconds == 29:
 		# Spawnar uma sequencia de inimigos
@@ -20,6 +19,9 @@ func spawner():
 		await get_tree().create_timer(2).timeout
 		# Voltar ao intervalo normal
 		$Timer.wait_time = 5
+
+	if Global.time.seconds == 59:
+		$Timer.wait_time -= 0.5
 
 func _ready():
 	$Timer.start()

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dkhvvmo72iiyt"
+path="res://.godot/imported/BackMusic 8 Bit Universe (256).mp3-2d17a92c415e0a66345549ebdb406c2f.mp3str"
+
+[deps]
+
+source_file="res://assets/song/BackMusic 8 Bit Universe (256).mp3"
+dest_files=["res://.godot/imported/BackMusic 8 Bit Universe (256).mp3-2d17a92c415e0a66345549ebdb406c2f.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
