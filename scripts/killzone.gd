@@ -11,3 +11,4 @@ func _on_body_entered(body):
 		get_parent().queue_free()
 		body.queue_free() 
 		Global.enemiesKilled += 1
+		print("Kills: ",Global.enemiesKilled)

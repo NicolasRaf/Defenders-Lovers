@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://cupv0hc2jmxbj"]
+[gd_scene load_steps=13 format=3 uid="uid://cupv0hc2jmxbj"]
 
 [ext_resource type="Script" path="res://scripts/world.gd" id="1_ot3tx"]
 [ext_resource type="PackedScene" uid="uid://b27n8i3012nih" path="res://scenes/player.tscn" id="1_xkf3l"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://7qokp63j3ott" path="res://scenes/finalScreen.tscn" id="6_22tte"]
 [ext_resource type="PackedScene" uid="uid://bnvdjymses3ns" path="res://scenes/options.tscn" id="8_x5dgo"]
 [ext_resource type="Texture2D" uid="uid://x2nnf4i5ei75" path="res://assets/map/castle2.0/1.png" id="9_jfcfn"]
+[ext_resource type="PackedScene" uid="uid://dl50ke4v2urqd" path="res://scenes/fadeOutLayer.tscn" id="10_6b45u"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jkfa6"]
 texture = ExtResource("5_p0o38")
@@ -246,8 +247,8 @@ collision_mask = 0
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
 position = Vector2(6, 6)
-scale = Vector2(1.32705, 1.31218)
-polygon = PackedVector2Array(-327, -178, -322.52, 202.716, -315.738, 180.615, -316.49, -178.329, 306.694, -179.853, 314.231, 184.426, -318.752, 182.902, -328.548, 201.954, 334.577, 202.716, 324, -191, -329, -196)
+scale = Vector2(1.227, 1.214)
+polygon = PackedVector2Array(-328.548, -173.757, -326.288, 203.478, -294.214, 174.629, -294.214, -158.979, 284.842, -158.515, 286.349, 177.567, -289.364, 185.95, -328.548, 201.954, 334.577, 202.716, 323.273, -198.144, -327.795, -201.954)
 
 [node name="Spawners" type="Node" parent="."]
 
@@ -304,6 +305,9 @@ texture = ExtResource("9_jfcfn")
 z_index = -1
 position = Vector2(288, 139)
 texture = ExtResource("9_jfcfn")
+
+[node name="FadeOutLayer" parent="." instance=ExtResource("10_6b45u")]
+visible = false
 
 [node name="Options" parent="." instance=ExtResource("8_x5dgo")]
 visible = false

@@ -4,21 +4,27 @@ extends Control
 @onready var timeLabel : Label= get_node("ColorRect/time")
 @onready var resetButton : Button = get_node("ColorRect/Reset")
 var progress : float = 0.0
+var fade : PackedScene = preload("res://scenes/fadeInLayer.tscn")
 
 
 func _process(delta):
 	var _pause = false
 	
-	if Global.lifeCastle <= 0 and position.y > -16:
-		position.y = move_toward(position.y,-16,8)
+	if Global.lifeCastle <= 0 and position.y > 16.5:
+		var _sp = abs(position.y - 16) / 10;
+		position.y = move_toward(position.y,-16,_sp)
+		$"../Stopwatch".visible = false
+		_pause = true 
+	
+	if _pause:
 		resetButton.grab_focus()
-		_pause = true
-		
-	if _pause and position.y <= -16 :
+		_pause = false
 		get_tree().paused = true
 		
 	killLabel.text = "KILLS: " + str(Global.enemiesKilled)
 	timeLabel.text = "TIME SURVIVOR: " + Global.textTime
+	
+
 
 func _on_reset_pressed():
 	get_tree().paused = false
