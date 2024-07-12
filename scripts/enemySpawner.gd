@@ -3,9 +3,11 @@ extends Node2D
 #Carregando inimigo no cenario
 var enemy0 = preload("res://scenes/enemy.tscn");
 var enemy1 = preload("res://scenes/enemy2.tscn");
+var enemy2 = preload("res://scenes/enemy3.tscn");
+var enemy3 = preload("res://scenes/enemy4.tscn");
 
 func spawner():
-	var enemies: Array = [enemy0, enemy1];
+	var enemies: Array = [enemy0, enemy1, enemy2, enemy3];
 	var _randInd = randi_range(0, len(enemies) - 1);
 	var enemy = enemies[_randInd];
 	var enemy_instance = enemy.instantiate();
