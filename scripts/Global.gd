@@ -8,3 +8,5 @@ var time = null;
 var enemiesKilled : int = 0
 var lifeCastle : float = 100
 var textTime : String = ""
+
+
