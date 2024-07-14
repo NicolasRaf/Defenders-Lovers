@@ -40,6 +40,8 @@ func _move() -> void:
 	velocity = _direction.normalized() * speed 
 	
 func _shot() -> void:
+	
+	Songs.playShot()
 	var _bullet = bulletPath.instantiate()
 	
 	get_parent().add_child(_bullet)
@@ -48,3 +50,4 @@ func _shot() -> void:
 	canShot = false
 	await get_tree().create_timer(0.5).timeout
 	canShot = true
+

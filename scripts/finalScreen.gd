@@ -22,7 +22,7 @@ func _process(delta):
 		get_tree().paused = true
 		
 	killLabel.text = "KILLS: " + str(Global.enemiesKilled)
-	timeLabel.text = "TIME SURVIVOR: " + Global.textTime
+	timeLabel.text = "TIME SURVIVOR: " + str(Global.time.clockLabel.text)
 	
 
 

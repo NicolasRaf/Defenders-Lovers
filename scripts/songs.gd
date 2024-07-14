@@ -1,7 +1,7 @@
 extends Node
 
 @onready var hitplay = $hitplay
-@onready var musicPlayer : AudioStreamPlayer2D = $AudioStreamPlayer2D
+@onready var musicPlayer : AudioStreamPlayer2D = $BackMusic
 var musicNum : int = 1 # Índice referente a cada musica da playlist
 
 # Banco de dados das musicas(Playlist)
@@ -35,3 +35,6 @@ func _on_audio_stream_player_2d_finished() -> void:
 	
 func playHit():
 	hitplay.play()
+	
+func playShot() -> void:
+	$shot.play()

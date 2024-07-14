@@ -11,7 +11,7 @@ func _ready():
 
 func _on_body_entered(body):
 	if body is Enemy:
-		Musics.playHit()
+		Songs.playHit()
 		body.queue_free()
 		takeDamage()
 

@@ -21,7 +21,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 Global="*res://scripts/Global.gd"
-Musics="*res://scenes/musics.tscn"
+Songs="*res://scenes/songs.tscn"
 
 [display]
 
