@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=3 uid="uid://dighsfghbiswb"]
+
+[ext_resource type="Texture2D" uid="uid://cerhhh6rojcfk" path="res://assets/map/castle2.0/7.png" id="1_l0hh1"]
+[ext_resource type="Script" path="res://scripts/tower.gd" id="1_qu30x"]
+[ext_resource type="PackedScene" uid="uid://dgi4ipffxyhgg" path="res://scenes/enemy.tscn" id="3_lyny0"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4spyj"]
+
+[node name="Tower" type="Node2D"]
+script = ExtResource("1_qu30x")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_l0hh1")
+hframes = 6
+
+[node name="ShotCooldown" type="Timer" parent="."]
+autostart = true
+
+[node name="Range" type="Area2D" parent="."]
+show_behind_parent = true
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Range"]
+scale = Vector2(12, 12)
+shape = SubResource("CircleShape2D_4spyj")
+debug_color = Color(0.963578, 0, 0.224316, 0.42)
+
+[node name="enemy" parent="." instance=ExtResource("3_lyny0")]
+position = Vector2(-308, -26)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(2.365, 2.365)
+
+[connection signal="body_entered" from="Range" to="." method="rangeEntered"]

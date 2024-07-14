@@ -18,5 +18,6 @@ func _on_exit_pressed():
 	get_tree().quit();
 
 func _on_options_pressed():
-	var optionsScene = preload("res://scenes/options.tscn").instantiate()
-	add_child(optionsScene)
+		options.get_node("VolSlider").grab_focus()
+		options.visible = true
+		get_tree().paused = true
