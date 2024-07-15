@@ -5,6 +5,7 @@ extends Control
 @onready var volSlider : HSlider = $VolSlider
 @onready var back : Button = $Back
 var count = 0
+var onScren = true
 
 func _ready():
 	volSlider.grab_focus()
@@ -19,10 +20,17 @@ func _process(delta):
 		visible = true
 		get_tree().paused = true
 		
-		if visible == true and count == 2:
-			count = 0
-			visible = false
-			get_tree().paused = false
+		
+	if get_tree().current_scene.name == "titlescreen" and visible == false and onScren:
+		onScren = false
+		get_parent().get_node("Buttons/start").grab_focus()
+		
+	
+	if visible == true and count == 2:
+		onScren =  true
+		count = 0
+		visible = false
+		get_tree().paused = false
 
 
 func _on_back_pressed():

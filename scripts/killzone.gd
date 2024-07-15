@@ -21,7 +21,7 @@ func _on_body_entered(body):
 			animated_sprite_2d.play("death_right");
 		get_parent().speed = 0
 		collision_mask = 9
-		collision_layer = 9
+		get_parent().collision_layer = 9
 		await animated_sprite_2d.animation_finished
 		get_parent().queue_free()
 		Global.enemiesKilled += 1
