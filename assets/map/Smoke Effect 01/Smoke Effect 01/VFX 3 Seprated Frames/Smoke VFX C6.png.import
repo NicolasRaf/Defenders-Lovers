@@ -1,0 +1,34 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://d0rbltvui5bsh"
+path="res://.godot/imported/Smoke VFX C6.png-f05c6b8cbb9619811dc34ca15d23f271.ctex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://assets/map/Smoke Effect 01/Smoke Effect 01/VFX 3 Seprated Frames/Smoke VFX C6.png"
+dest_files=["res://.godot/imported/Smoke VFX C6.png-f05c6b8cbb9619811dc34ca15d23f271.ctex"]
+
+[params]
+
+compress/mode=0
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=false
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=1

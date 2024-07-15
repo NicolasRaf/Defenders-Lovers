@@ -12,12 +12,13 @@ func _ready():
 	Global.Player = self;
 
 func _physics_process(delta) -> void:
-	$Node2D.look_at(get_global_mouse_position())
-	if Input.is_action_pressed("shot") and canShot:
-		_shot()
-	
-	_move()
-	move_and_slide()
+	if get_parent().get_node("TimeStart") == null:
+		$Node2D.look_at(get_global_mouse_position())
+		if Input.is_action_pressed("shot") and canShot:
+			_shot()
+		
+		_move()
+		move_and_slide()
 	
 
 func _move() -> void:
