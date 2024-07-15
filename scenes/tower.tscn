@@ -243,7 +243,7 @@ animations = [{
 size = Vector2(44, 41)
 
 [node name="Tower" type="Node2D"]
-position = Vector2(15, 14)
+position = Vector2(15, 8)
 script = ExtResource("1_qu30x")
 metadata/_edit_group_ = true
 
@@ -329,9 +329,9 @@ animation = &"healing"
 [node name="ColorRect" type="ColorRect" parent="."]
 z_index = 2
 offset_left = -34.0
-offset_top = 34.0
+offset_top = 8.0
 offset_right = 32.0
-offset_bottom = 74.0
+offset_bottom = 48.0
 color = Color(0, 0, 0, 0.647059)
 
 [node name="Skull" type="AnimatedSprite2D" parent="ColorRect"]

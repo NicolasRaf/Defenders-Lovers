@@ -350,6 +350,16 @@ offset_bottom = -22.0
 [node name="CastleImage" parent="Options" index="0"]
 position = Vector2(3, -1)
 
+[node name="Back" parent="Options" index="4"]
+clip_contents = true
+
+[node name="ColorRect2" parent="Options" index="5"]
+z_index = 10
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 0.0
+offset_bottom = 0.0
+
 [node name="NemMoldura" parent="Options" index="6"]
 position = Vector2(0.750026, -2.5)
 scale = Vector2(0.943056, 0.967593)
@@ -363,6 +373,18 @@ offset_left = 57.0
 offset_top = -77.0
 offset_right = 112.0
 offset_bottom = -46.0
+
+[node name="ColorRect3" type="ColorRect" parent="Options"]
+process_mode = 3
+light_mask = 0
+layout_mode = 0
+offset_left = -430.0
+offset_top = -240.0
+offset_right = -361.0
+offset_bottom = -200.0
+scale = Vector2(13.5, 13.5)
+mouse_filter = 2
+color = Color(0.0352941, 0.0352941, 0.0352941, 0.780392)
 
 [node name="TimeStart" parent="." instance=ExtResource("11_x2l3i")]
 visible = false
