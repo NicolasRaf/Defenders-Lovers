@@ -2,6 +2,7 @@ extends Node2D
 
 @onready var audioStream : AudioStreamPlayer2D= get_node("AudioStreamPlayer2D")
 
+var startFree : bool = false
 var Player = null;
 var CastleReference = null;
 var time = null;
