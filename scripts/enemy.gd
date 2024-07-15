@@ -13,6 +13,7 @@ var speed
 func _ready():
 	speed = Global.speedEnemy if get_parent().name != "wave" else 0.35
 	damage = Global.damageEnem if get_parent().name != "wave" else 10
+	Global.enemy = self;
 	
 func _process(delta):
 	if get_parent().name == "wave" and not start:
@@ -23,21 +24,21 @@ func _process(delta):
 		await _tween.tween_property(self,"modulate",Color(0,0,1,1),1).finished
 		start = false
 		
-	
+
+#Código responsável pela posição e propriedades dos enemies
 func _physics_process(delta):
-	var direction = global_position.direction_to(Global.CastleReference.global_position);
+	#A variavel direction por pegar a localização de destino do enemies
+	direction = global_position.direction_to(Global.CastleReference.global_position);
+	#Opereração responsável por fazer os enemies ir até o alvo
 	global_position += direction * speed;
+	#É responsável por dizer a quantidade de dano que os enemies causam
 	Global.CastleReference.damageTaken = damage;
 	move_and_slide()
 	
-	#if position.x > direction.x :
-		#animated_sprite_2d.play("Run_right");
-	#elif position.x < direction.x:
-		#animated_sprite_2d.play("Run_left");
-	#else:
-		#animated_sprite_2d.play("Run_left")
-	
+	#Função responsável pela direção do enemyies
 	if direction.x > 0:
+	#Quando o player nascer na direita
 		animated_sprite_2d.flip_h = false
 	else:
+	#Quando o player nascer na esquerda
 		animated_sprite_2d.flip_h = true
