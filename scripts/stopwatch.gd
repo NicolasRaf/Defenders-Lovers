@@ -7,7 +7,6 @@ var minutes : int = 0
 var seconds : int = 0
 
 func _ready():
-	timer.start()
 	Global.time = self;
 
 func _process(delta):
@@ -26,5 +25,7 @@ func updateClock() -> void:
 			minutes += 1;
 			
 func updateMessage() -> void:
-	clockLabel.text = "Passed Time: " + str(minutes) + ":" + str(seconds) if seconds > 9 else "Passed Time: " + str(minutes) + ":0" + str(seconds)
-	Global.textTime = str(minutes) + ":" + str(seconds) if seconds > 9 else str(minutes) + ":0" + str(seconds) 
+	clockLabel.text = str(minutes) + ":" + str(seconds) if seconds > 9 else str(minutes) + ":0" + str(seconds)
+	
+func start() -> void:
+	timer.start()

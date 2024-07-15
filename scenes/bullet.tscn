@@ -1,7 +1,8 @@
-[gd_scene load_steps=16 format=3 uid="uid://coqbpjww5275i"]
+[gd_scene load_steps=17 format=3 uid="uid://coqbpjww5275i"]
 
 [ext_resource type="Script" path="res://scripts/bullet.gd" id="1_jb4he"]
 [ext_resource type="Texture2D" uid="uid://ccp0gqsydoqbq" path="res://assets/player/BulletHeart.png" id="2_7vkuv"]
+[ext_resource type="Texture2D" uid="uid://bi134ue5dlcxk" path="res://assets/player/bullet.png" id="3_uyk5w"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_icij1"]
 size = Vector2(20, 14)
@@ -105,3 +106,8 @@ scale = Vector2(0.4, 0.4)
 sprite_frames = SubResource("SpriteFrames_d11v5")
 autoplay = "default"
 frame_progress = 0.205308
+
+[node name="Bullet" type="Sprite2D" parent="."]
+visible = false
+scale = Vector2(0.17345, 0.184809)
+texture = ExtResource("3_uyk5w")

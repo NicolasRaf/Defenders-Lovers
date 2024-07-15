@@ -12,13 +12,25 @@ script = ExtResource("1_goru6")
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
+offset_left = 62.0
+offset_right = 117.0
+offset_bottom = 29.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("2_o4i40")
+theme_override_font_sizes/font_size = 21
+uppercase = true
+
+[node name="ClockPassed" type="Label" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
 offset_left = -116.5
 offset_right = 116.5
 offset_bottom = 29.0
 grow_horizontal = 2
 theme_override_fonts/font = ExtResource("2_o4i40")
 theme_override_font_sizes/font_size = 21
-text = "Passed Time: 0:00"
+text = "Passed Time:"
 uppercase = true
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

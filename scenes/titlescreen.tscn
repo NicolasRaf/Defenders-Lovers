@@ -1,19 +1,22 @@
-[gd_scene load_steps=6 format=3 uid="uid://ckreaucox1dvb"]
+[gd_scene load_steps=7 format=3 uid="uid://ckreaucox1dvb"]
 
 [ext_resource type="Script" path="res://scripts/titlescreen.gd" id="1_aralp"]
 [ext_resource type="FontFile" uid="uid://due786ehbt6wf" path="res://assets/fonts/Stitch-'n School.ttf" id="1_bbgsk"]
 [ext_resource type="Texture2D" uid="uid://chyn7vf2748jw" path="res://assets/fonts/2.jpg" id="2_coyn6"]
 [ext_resource type="Theme" uid="uid://bh5uhv7nypu4m" path="res://assets/fonts/buttons.tres" id="3_gm1t1"]
 [ext_resource type="PackedScene" uid="uid://dl50ke4v2urqd" path="res://scenes/fadeOutLayer.tscn" id="5_wah8a"]
+[ext_resource type="PackedScene" uid="uid://bnvdjymses3ns" path="res://scenes/options.tscn" id="6_4t7bn"]
 
 [node name="titlescreen" type="CanvasLayer"]
 script = ExtResource("1_aralp")
 
 [node name="Background" type="Sprite2D" parent="."]
-self_modulate = Color(0.523781, 0.523781, 0.523781, 1)
-position = Vector2(641.5, 388)
-scale = Vector2(1.24902, 0.765625)
+modulate = Color(0.742472, 0.732679, 0.73919, 1)
+position = Vector2(635, 350)
+scale = Vector2(1.25, 0.872)
 texture = ExtResource("2_coyn6")
+region_enabled = true
+region_rect = Rect2(1.45795, 179.718, 1028.9, 838.279)
 
 [node name="Label" type="RichTextLabel" parent="."]
 anchors_preset = 8
@@ -30,6 +33,9 @@ grow_vertical = 2
 size_flags_horizontal = 4
 theme_override_colors/font_shadow_color = Color(0.92549, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0.92549, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 12
+theme_override_constants/shadow_offset_y = 6
+theme_override_constants/shadow_outline_size = 4
 theme_override_fonts/normal_font = ExtResource("1_bbgsk")
 theme_override_font_sizes/normal_font_size = 86
 bbcode_enabled = true
@@ -90,6 +96,14 @@ theme_override_fonts/font = ExtResource("1_bbgsk")
 theme_override_font_sizes/font_size = 44
 text = "EXIT
 "
+
+[node name="Options" parent="." instance=ExtResource("6_4t7bn")]
+visible = false
+offset_left = -315.0
+offset_top = -155.0
+offset_right = -315.0
+offset_bottom = -155.0
+scale = Vector2(1.5, 1.5)
 
 [connection signal="pressed" from="Buttons/start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="Buttons/options" to="." method="_on_options_pressed"]

@@ -14,13 +14,13 @@ func _process(delta):
 
 func _on_back_pressed():
 	if get_tree().current_scene.name == "titlescreen":
+		get_tree().paused = false
+		visible = false
 		get_parent().get_node("Buttons/start").grab_focus()
 		
 	if get_tree().current_scene.name == "World":
 		get_tree().paused = false
 		visible = false
-	else:
-		queue_free()
 	
 	
 func _on_fullscreen_pressed():

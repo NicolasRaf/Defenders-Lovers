@@ -7,8 +7,7 @@ func _on_body_entered(body):
 		#body.queue_free()
 		
 	if body is Bullet:
-		Musics.playHit()
+		Songs.playHit()
 		get_parent().queue_free()
 		body.queue_free() 
 		Global.enemiesKilled += 1
-		print("Kills: ",Global.enemiesKilled)

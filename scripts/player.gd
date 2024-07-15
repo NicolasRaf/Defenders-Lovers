@@ -12,12 +12,13 @@ func _ready():
 	Global.Player = self;
 
 func _physics_process(delta) -> void:
-	$Node2D.look_at(get_global_mouse_position())
-	if Input.is_action_pressed("shot") and canShot:
-		_shot()
-	
-	_move()
-	move_and_slide()
+	if get_parent().get_node("TimeStart") == null:
+		$Node2D.look_at(get_global_mouse_position())
+		if Input.is_action_pressed("shot") and canShot:
+			_shot()
+		
+		_move()
+		move_and_slide()
 	
 
 func _move() -> void:
@@ -40,6 +41,8 @@ func _move() -> void:
 	velocity = _direction.normalized() * speed 
 	
 func _shot() -> void:
+	
+	Songs.playShot()
 	var _bullet = bulletPath.instantiate()
 	
 	get_parent().add_child(_bullet)
@@ -48,3 +51,4 @@ func _shot() -> void:
 	canShot = false
 	await get_tree().create_timer(0.5).timeout
 	canShot = true
+
