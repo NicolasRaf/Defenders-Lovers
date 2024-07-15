@@ -18,6 +18,7 @@ func _ready():
 
 # Função de controle e legibilidade para o play da musica atual
 func playMusic() -> void:
+	musicPlayer.stream = musicDatabase.get(musicNum)
 	musicPlayer.play()
 	
 

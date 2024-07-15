@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scripts/world.gd" id="1_ot3tx"]
 [ext_resource type="PackedScene" uid="uid://b27n8i3012nih" path="res://scenes/player.tscn" id="1_xkf3l"]
-[ext_resource type="PackedScene" uid="uid://bg418oocjac22" path="res://scenes/enemySpawner.tscn" id="2_tga13"]
+[ext_resource type="PackedScene" uid="uid://bg418oocjac22" path="res://enemySpawner.tscn" id="3_mvh04"]
 [ext_resource type="PackedScene" uid="uid://dgtsoi5um8ccs" path="res://scenes/castle.tscn" id="4_5s3yn"]
 [ext_resource type="Texture2D" uid="uid://8riiut50624" path="res://assets/map/overworld_tileset_grass.png" id="5_p0o38"]
 [ext_resource type="PackedScene" uid="uid://d3ar40m4c5fu0" path="res://scenes/stopwatch.tscn" id="6_4xvk6"]
@@ -257,16 +257,16 @@ polygon = PackedVector2Array(-328.548, -173.757, -326.288, 203.478, -294.214, 17
 
 [node name="Spawners" type="Node" parent="."]
 
-[node name="EnemySpawner" parent="Spawners" instance=ExtResource("2_tga13")]
+[node name="EnemySpawner" parent="Spawners" instance=ExtResource("3_mvh04")]
 position = Vector2(-953, 7)
 
-[node name="EnemySpawner5" parent="Spawners" instance=ExtResource("2_tga13")]
+[node name="EnemySpawner5" parent="Spawners" instance=ExtResource("3_mvh04")]
 position = Vector2(-495, -625)
 
-[node name="EnemySpawner6" parent="Spawners" instance=ExtResource("2_tga13")]
+[node name="EnemySpawner6" parent="Spawners" instance=ExtResource("3_mvh04")]
 position = Vector2(641, -601)
 
-[node name="EnemySpawner3" parent="Spawners" instance=ExtResource("2_tga13")]
+[node name="EnemySpawner3" parent="Spawners" instance=ExtResource("3_mvh04")]
 position = Vector2(988, 31)
 
 [node name="Castle" parent="." instance=ExtResource("4_5s3yn")]
@@ -287,6 +287,11 @@ scale = Vector2(0.645, 0.645)
 
 [node name="ColorRect" parent="FinalScreen" index="0"]
 z_index = 5
+
+[node name="Moldura" parent="FinalScreen" index="1"]
+z_index = 6
+position = Vector2(482.171, 356.589)
+scale = Vector2(1.47, 1.45)
 
 [node name="Stopwatch" parent="." instance=ExtResource("6_4xvk6")]
 
@@ -344,6 +349,20 @@ offset_bottom = -22.0
 
 [node name="CastleImage" parent="Options" index="0"]
 position = Vector2(3, -1)
+
+[node name="NemMoldura" parent="Options" index="6"]
+position = Vector2(0.750026, -2.5)
+scale = Vector2(0.943056, 0.967593)
+
+[node name="OldMoldura" parent="Options" index="7"]
+position = Vector2(1.00002, -2.5)
+scale = Vector2(0.944444, 0.962963)
+
+[node name="OptionMusic" parent="Options" index="8"]
+offset_left = 57.0
+offset_top = -77.0
+offset_right = 112.0
+offset_bottom = -46.0
 
 [node name="TimeStart" parent="." instance=ExtResource("11_x2l3i")]
 visible = false
