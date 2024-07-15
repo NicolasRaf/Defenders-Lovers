@@ -11,7 +11,7 @@ var speed
 @onready var animated_sprite_2d = $AnimatedSprite2D
 
 func _ready():
-	speed = Global.speedEnemy if get_parent().name != "wave" else 0.5
+	speed = Global.speedEnemy if get_parent().name != "wave" else 0.35
 	damage = Global.damageEnem if get_parent().name != "wave" else 10
 	
 func _process(delta):

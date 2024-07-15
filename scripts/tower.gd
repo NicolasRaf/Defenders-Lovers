@@ -32,7 +32,7 @@ func _process(delta):
 	
 func buildTower1() -> void:
 	if towerLevel == 0:
-			deathsRequired = 25
+			deathsRequired = 75
 			skullLabel.text = str(Global.enemiesKilled) + "/" + str(deathsRequired) 
 			skullLabel.modulate = Color(255,0,0,255)
 			if Global.enemiesKilled == deathsRequired:
@@ -62,7 +62,7 @@ func buildTower1() -> void:
 func buildTower2() -> void:
 	
 	if towerLevel == 0:
-		deathsRequired = 50
+		deathsRequired = 300
 		skullLabel.text = str(Global.enemiesKilled) + "/" + str(deathsRequired) 
 		skullLabel.modulate = Color(255,0,0,255)
 		if Global.enemiesKilled == deathsRequired:
@@ -91,7 +91,7 @@ func buildTower2() -> void:
 
 func buildHpTower1() -> void:
 	if towerLevel == 0:
-			timeNeeded = "0:30"
+			timeNeeded = "2:00"
 			timeLabel.text = timeNeeded
 			timeLabel.modulate = Color(255,0,0,255)
 			if Global.time.clockLabel.text == timeNeeded:
@@ -103,7 +103,7 @@ func buildHpTower1() -> void:
 				$HpTowerMedium.visible = true
 				
 	if towerLevel == 1:
-		timeNeeded = "1:00"
+		timeNeeded = "3:30"
 		timeLabel.text = timeNeeded
 		timeLabel.modulate = Color(255,0,0,255)
 		if Global.time.clockLabel.text == timeNeeded:
@@ -121,7 +121,7 @@ func buildHpTower1() -> void:
 			
 func buildHpTower2() -> void:
 	if towerLevel == 0:
-			timeNeeded = "0:30"
+			timeNeeded = "4:00"
 			timeLabel.text = timeNeeded
 			timeLabel.modulate = Color(255,0,0,255)
 			if Global.time.clockLabel.text == timeNeeded:
@@ -133,7 +133,7 @@ func buildHpTower2() -> void:
 				$HpTowerMedium.visible = true
 				
 	if towerLevel == 1:
-		timeNeeded = "1:00"
+		timeNeeded = "5:30"
 		timeLabel.text = timeNeeded
 		timeLabel.modulate = Color(255,0,0,255)
 		if Global.time.clockLabel.text == timeNeeded:
@@ -157,7 +157,7 @@ func rangeEntered(body):
 		get_parent().add_child(_bullet)
 		_bullet.position = position
 		_bullet.velocity = body.global_position - _bullet.position
-		_bullet.speed = 350
+		_bullet.speed = shotSpeed
 		_bullet.get_node("Sprite2D").visible = false
 		_bullet.get_node("Bullet").visible = true
 	

@@ -1,5 +1,6 @@
 extends Node2D
 
+var startFree : bool = false
 var Player = null;
 var CastleReference = null;
 var time = null;
