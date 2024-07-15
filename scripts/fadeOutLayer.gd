@@ -2,7 +2,6 @@ extends CanvasLayer
 
 var progress: float = 1.0
 @onready var colorRect: ColorRect = get_node("ColorRect") 
-@onready var startButton = $"../Buttons/start"
 
 func  _ready():
 	visible = true # Garantia para que o fadeOut ocorra

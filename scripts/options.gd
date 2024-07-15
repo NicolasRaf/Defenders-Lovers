@@ -13,7 +13,7 @@ func _ready():
 func _process(delta):
 	AudioServer.set_bus_volume_db(0,linear_to_db(volSlider.value))
 	
-	if Input.is_action_just_pressed("ui_cancel") and get_parent().get_node("TimeStart") == null:
+	if Input.is_action_just_pressed("ui_cancel") and Global.startFree:
 		count += 1 
 		get_node("VolSlider").grab_focus()
 		visible = true
