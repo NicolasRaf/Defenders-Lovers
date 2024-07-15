@@ -14,3 +14,4 @@ func _on_timer_timeout():
 		await get_tree().create_timer(1).timeout
 		Global.time.start()
 		queue_free()
+		Global.startFree = true
