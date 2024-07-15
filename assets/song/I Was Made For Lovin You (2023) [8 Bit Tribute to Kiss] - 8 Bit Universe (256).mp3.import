@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dkmr7sqst27k5"
+path="res://.godot/imported/I Was Made For Lovin You (2023) [8 Bit Tribute to Kiss] - 8 Bit Universe (256).mp3-1ba477581c82650e18dd062fd861c207.mp3str"
+
+[deps]
+
+source_file="res://assets/song/I Was Made For Lovin You (2023) [8 Bit Tribute to Kiss] - 8 Bit Universe (256).mp3"
+dest_files=["res://.godot/imported/I Was Made For Lovin You (2023) [8 Bit Tribute to Kiss] - 8 Bit Universe (256).mp3-1ba477581c82650e18dd062fd861c207.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

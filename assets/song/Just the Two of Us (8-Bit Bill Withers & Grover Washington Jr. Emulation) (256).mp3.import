@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b7ximxu8f4mjj"
+path="res://.godot/imported/Just the Two of Us (8-Bit Bill Withers & Grover Washington Jr. Emulation) (256).mp3-35f1b801ff112f8326c85aaad3924857.mp3str"
+
+[deps]
+
+source_file="res://assets/song/Just the Two of Us (8-Bit Bill Withers & Grover Washington Jr. Emulation) (256).mp3"
+dest_files=["res://.godot/imported/Just the Two of Us (8-Bit Bill Withers & Grover Washington Jr. Emulation) (256).mp3-35f1b801ff112f8326c85aaad3924857.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
