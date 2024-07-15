@@ -1,18 +1,19 @@
 extends Node2D
 
-var startFree : bool = false
+var startFree : bool = false;
 var Player = null;
 var CastleReference = null;
 var time = null;
-var enemiesKilled : int = 0
-var lifeCastle : float = 100
-
+var enemiesKilled : int = 0;
+var lifeCastle : float = 100;
+var death = null;
+var enemy = null;
 # variável de speed do inimigo
 var speedEnemy = 0.0;
 # variável de danage do inimigo
 var damageEnem = 0.0;
 
-#Dicionario de propriedades de inimigos 
+#Dicionario de propriedades dos enemies
 var propriety_enemy = {
 	
 	"enemy0" : {
