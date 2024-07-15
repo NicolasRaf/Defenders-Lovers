@@ -7,13 +7,9 @@ var enemy2 = preload("res://scenes/enemy3.tscn");
 var enemy3 = preload("res://scenes/enemy4.tscn");
 var currentWaitTime : float = 5.0
 var canDecress = true
+var haveWave = false
 
 func _process(delta):
-	# Quando o contador de segundos atingir 29:
-	if Global.time.seconds == 29:
-		# Spawnar uma sequencia de inimigos
-		wave()
-
 	if Global.time.seconds == 58 and canDecress:
 		timeDecress()
 		
@@ -39,13 +35,17 @@ func _on_timer_timeout():
 	spawner()
 	
 func wave() -> void:
-	$Timer.wait_time = 0.1
-	await get_tree().create_timer(5).timeout
-	# Voltar ao intervalo normal
-	$Timer.wait_time = currentWaitTime
+	var wavePath = preload("res://scenes/wave.tscn")
+	var wave = wavePath.instantiate()
+	get_parent().get_parent().add_child(wave)
 	
 func timeDecress() -> void:
 	canDecress = false
 	currentWaitTime -= 0.5
 	await get_tree().create_timer(1).timeout
 	canDecress = true
+
+
+func _on_wave_timer_timeout():
+	if get_node(".").name == "EnemySpawner" and get_parent().get_parent().get_node("wave") == null:
+		wave()

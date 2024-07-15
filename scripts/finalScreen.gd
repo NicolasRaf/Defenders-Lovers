@@ -20,7 +20,10 @@ func _process(delta):
 		resetButton.grab_focus()
 		_pause = false
 		get_tree().paused = true
-		
+	
+	
+	timeLabel.add_theme_color_override("font_color",Color(0,0,255,1))
+	killLabel.add_theme_color_override("font_color",Color(255,0,0,1))
 	killLabel.text = "KILLS: " + str(Global.enemiesKilled)
 	timeLabel.text = "TIME SURVIVOR: " + str(Global.time.clockLabel.text)
 	

@@ -1,0 +1,118 @@
+[gd_scene load_steps=7 format=3 uid="uid://bjybfpwtocyje"]
+
+[ext_resource type="Script" path="res://scripts/wave.gd" id="1_ansj2"]
+[ext_resource type="PackedScene" uid="uid://dgi4ipffxyhgg" path="res://scenes/enemy.tscn" id="1_mkab5"]
+[ext_resource type="PackedScene" uid="uid://bwgyoccma4q6r" path="res://scenes/enemy4.tscn" id="2_pqtom"]
+[ext_resource type="PackedScene" uid="uid://4scrdm53sqgn" path="res://scenes/enemy2.tscn" id="3_4ulyk"]
+[ext_resource type="PackedScene" uid="uid://b1vvd2c7g1lir" path="res://scenes/enemy3.tscn" id="4_4sd8c"]
+[ext_resource type="FontFile" uid="uid://due786ehbt6wf" path="res://assets/fonts/Stitch-'n School.ttf" id="5_3q0ak"]
+
+[node name="wave" type="Node2D"]
+position = Vector2(108, -691)
+script = ExtResource("1_ansj2")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Message" type="RichTextLabel" parent="CanvasLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -340.0
+offset_top = 381.0
+offset_right = 340.0
+offset_bottom = 423.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_colors/font_shadow_color = Color(1, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 5
+theme_override_constants/shadow_offset_y = 3
+theme_override_fonts/normal_font = ExtResource("5_3q0ak")
+theme_override_font_sizes/normal_font_size = 33
+bbcode_enabled = true
+text = "[wave][center]A BIG WAVE IS COMMING"
+scroll_active = false
+
+[node name="enemy5" parent="." instance=ExtResource("1_mkab5")]
+position = Vector2(703, 234)
+scale = Vector2(1.05, 1.05)
+
+[node name="enemy12" parent="." instance=ExtResource("1_mkab5")]
+position = Vector2(729, 986)
+scale = Vector2(1.05, 1.05)
+
+[node name="enemy14" parent="." instance=ExtResource("1_mkab5")]
+position = Vector2(553, 52)
+scale = Vector2(1.05, 1.05)
+
+[node name="enemy18" parent="." instance=ExtResource("1_mkab5")]
+position = Vector2(-98, 53)
+scale = Vector2(1.05, 1.05)
+
+[node name="enemy20" parent="." instance=ExtResource("1_mkab5")]
+position = Vector2(-829, 33)
+scale = Vector2(1.05, 1.05)
+
+[node name="enemy21" parent="." instance=ExtResource("1_mkab5")]
+position = Vector2(-569, 49)
+scale = Vector2(1.05, 1.05)
+
+[node name="enemy28" parent="." instance=ExtResource("1_mkab5")]
+position = Vector2(-924, 704)
+scale = Vector2(1.05, 1.05)
+
+[node name="enemy31" parent="." instance=ExtResource("2_pqtom")]
+position = Vector2(-932, 1018)
+scale = Vector2(1.05, 1.05)
+
+[node name="enemy3" parent="." instance=ExtResource("3_4ulyk")]
+position = Vector2(-919, 894)
+scale = Vector2(1.05, 1.05)
+
+[node name="enemy4" parent="." instance=ExtResource("3_4ulyk")]
+position = Vector2(709, 867)
+scale = Vector2(1.05, 1.05)
+
+[node name="enemy27" parent="." instance=ExtResource("3_4ulyk")]
+position = Vector2(-911, 480)
+scale = Vector2(1.05, 1.05)
+
+[node name="enemy25" parent="." instance=ExtResource("4_4sd8c")]
+position = Vector2(-922, 312)
+scale = Vector2(1.05, 1.05)
+
+[node name="enemy22" parent="." instance=ExtResource("4_4sd8c")]
+position = Vector2(-941, 34)
+scale = Vector2(1.05, 1.05)
+
+[node name="enemy26" parent="." instance=ExtResource("2_pqtom")]
+position = Vector2(-319, 59)
+scale = Vector2(1.05, 1.05)
+
+[node name="enemy17" parent="." instance=ExtResource("4_4sd8c")]
+position = Vector2(118, 57)
+scale = Vector2(1.05, 1.05)
+
+[node name="enemy2" parent="." instance=ExtResource("3_4ulyk")]
+position = Vector2(370, 66)
+scale = Vector2(1.05, 1.05)
+
+[node name="enemy13" parent="." instance=ExtResource("2_pqtom")]
+position = Vector2(674, 76)
+scale = Vector2(1.05, 1.05)
+
+[node name="enemy10" parent="." instance=ExtResource("2_pqtom")]
+position = Vector2(726, 757)
+scale = Vector2(1.05, 1.05)
+
+[node name="enemy9" parent="." instance=ExtResource("2_pqtom")]
+position = Vector2(734, 574)
+scale = Vector2(1.05, 1.05)
+
+[node name="enemy7" parent="." instance=ExtResource("1_mkab5")]
+position = Vector2(736, 447)
+scale = Vector2(1.05, 1.05)
