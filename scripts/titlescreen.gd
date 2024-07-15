@@ -6,8 +6,9 @@ var fade : PackedScene = preload("res://scenes/fadeInLayer.tscn");
 var canGrab : bool = true;
 
 func _ready():
-	print("ready menu");
-	startButton.grab_focus();
+	Global.startFree = true
+	print("ready menu")
+	startButton.grab_focus()
 
 func _on_start_pressed():
 	var fadeScene = fade.instantiate();
