@@ -6,7 +6,6 @@ var CastleReference = null;
 var time = null;
 var enemiesKilled : int = 0
 var lifeCastle : float = 100
-var startFree : bool = false
 
 # variável de speed do inimigo
 var speedEnemy = 0.0;

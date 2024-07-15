@@ -6,6 +6,7 @@ var fade : PackedScene = preload("res://scenes/fadeInLayer.tscn")
 var canGrab : bool = true
 
 func _ready():
+	Global.startFree = true
 	print("ready menu")
 	startButton.grab_focus()
 

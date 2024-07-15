@@ -267,7 +267,7 @@ script = ExtResource("1_tvhx7")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(1.4, 1.4)
 sprite_frames = SubResource("SpriteFrames_4pd8x")
-animation = &"Run_right"
+animation = &"Run_down"
 autoplay = "Run_right"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

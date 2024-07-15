@@ -17,6 +17,7 @@ func _process(delta):
 		_pause = true 
 	
 	if _pause:
+		Global.startFree = false
 		resetButton.grab_focus()
 		_pause = false
 		get_tree().paused = true

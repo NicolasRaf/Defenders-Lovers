@@ -19,9 +19,6 @@ func _process(delta):
 		visible = true
 		get_tree().paused = true
 		
-		if get_tree().current_scene.name == "titlescreen":
-			get_parent().get_node("Buttons/start").grab_focus()
-		
 		if visible == true and count == 2:
 			count = 0
 			visible = false

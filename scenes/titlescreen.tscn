@@ -105,6 +105,21 @@ offset_right = -315.0
 offset_bottom = -155.0
 scale = Vector2(1.5, 1.5)
 
+[node name="Devs" type="Label" parent="."]
+offset_left = 14.0
+offset_top = 686.0
+offset_right = 310.0
+offset_bottom = 709.0
+theme_override_colors/font_shadow_color = Color(1, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("1_bbgsk")
+theme_override_font_sizes/font_size = 13
+text = "Devs - Nicolas Rafael and Kaio Gabriel"
+uppercase = true
+
 [connection signal="pressed" from="Buttons/start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="Buttons/options" to="." method="_on_options_pressed"]
 [connection signal="pressed" from="Buttons/exit" to="." method="_on_exit_pressed"]
