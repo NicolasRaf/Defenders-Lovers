@@ -19,9 +19,9 @@ func _process(delta):
 	if get_parent().name == "wave" and not start:
 		start = true
 		var _tween = get_tree().create_tween()
-		await _tween.tween_property(self,"modulate",Color(1,0,0,1),1)
-		await _tween.tween_property(self,"modulate",Color(0,1,0,1),1)
-		await _tween.tween_property(self,"modulate",Color(0,0,1,1),1).finished
+		await _tween.tween_property($AnimatedSprite2D,"modulate",Color(1,0,0,1),1)
+		await _tween.tween_property($AnimatedSprite2D,"modulate",Color(0,1,0,1),1)
+		await _tween.tween_property($AnimatedSprite2D,"modulate",Color(0,0,1,1),1).finished
 		start = false
 		
 

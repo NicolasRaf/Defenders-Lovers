@@ -354,13 +354,13 @@ size = Vector2(14, 21)
 size = Vector2(18, 21)
 
 [node name="enemy2" type="CharacterBody2D"]
-modulate = Color(1, 0, 0, 1)
 z_index = 1
 collision_layer = 2
 collision_mask = 0
 script = ExtResource("1_b37tp")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+modulate = Color(1, 0, 0, 1)
 scale = Vector2(1.4, 1.4)
 sprite_frames = SubResource("SpriteFrames_23lya")
 animation = &"death_left"
