@@ -2,19 +2,13 @@
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_s4rwl"]
 [ext_resource type="PackedScene" uid="uid://d3ar40m4c5fu0" path="res://scenes/stopwatch.tscn" id="2_il41x"]
-
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_7o38o"]
-size = Vector2(20, 20)
+[ext_resource type="Texture2D" uid="uid://hqkfoikh42r4" path="res://assets/player/player.png" id="3_x4250"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_b4k68"]
 
 [node name="Player" type="CharacterBody2D"]
 collision_layer = 4
 script = ExtResource("1_s4rwl")
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-visible = false
-texture = SubResource("PlaceholderTexture2D_7o38o")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_b4k68")
@@ -27,10 +21,7 @@ position = Vector2(29, 0)
 [node name="Stopwatch" parent="." instance=ExtResource("2_il41x")]
 visible = false
 
-[node name="Label" type="Label" parent="."]
-offset_left = -15.0
-offset_top = -9.0
-offset_right = 19.0
-offset_bottom = 26.0
-theme_override_font_sizes/font_size = 22
-text = "💖"
+[node name="Player" type="Sprite2D" parent="."]
+position = Vector2(-4.76837e-07, 0)
+scale = Vector2(0.565512, 0.581731)
+texture = ExtResource("3_x4250")

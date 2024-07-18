@@ -5,6 +5,12 @@ extends CanvasLayer;
 var fade : PackedScene = preload("res://scenes/fadeInLayer.tscn");
 var canGrab : bool = true;
 
+func _process(delta):
+	if Songs.musicNum == 5:
+		$Label.text = "[rainbow][wave]DEFENDERS LOVERS"
+	else:
+		$Label.text = "[wave]DEFENDERS LOVERS"
+
 func _ready():
 	Global.startFree = true
 	print("ready menu")
