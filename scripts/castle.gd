@@ -4,6 +4,7 @@ extends Area2D
 var damageTaken : int = 10
 
 func _process(delta) -> void:
+	lifebar.value = 100
 	Global.lifeCastle = lifebar.value
 
 func _ready():

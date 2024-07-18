@@ -315,6 +315,19 @@ offset_top = 2.0
 offset_right = 34.0
 offset_bottom = 42.0
 
+[node name="ProgressBar" parent="Towers/HpTower" index="11"]
+offset_left = 38.0
+offset_top = 23.0
+offset_right = 76.0
+offset_bottom = 27.0
+
+[node name="ColorRect2" parent="Towers/HpTower/ProgressBar" index="0"]
+layout_mode = 0
+offset_left = -0.833336
+offset_top = -1.66667
+offset_right = 39.1667
+offset_bottom = 5.33333
+
 [node name="HpTower2" parent="Towers" instance=ExtResource("12_aav1q")]
 position = Vector2(287, 173)
 
@@ -336,6 +349,29 @@ scale = Vector2(0.194444, 0.199074)
 z_index = 10
 position = Vector2(33, 19.5)
 scale = Vector2(0.194444, 0.199074)
+
+[node name="ProgressBar" parent="Towers/HpTower2" index="11"]
+offset_left = -42.0
+offset_top = 21.0
+offset_right = -4.0
+offset_bottom = 25.0
+
+[node name="ColorRect2" parent="Towers/HpTower2/ProgressBar" index="0"]
+visible = false
+layout_mode = 0
+offset_left = -0.833333
+offset_top = 0.0
+offset_right = 39.1667
+offset_bottom = 6.0
+
+[node name="ColorRect3" type="ColorRect" parent="Towers/HpTower2/ProgressBar" index="1"]
+z_index = -1
+layout_mode = 0
+offset_left = -0.833333
+offset_top = -0.833333
+offset_right = 39.1667
+offset_bottom = 5.16667
+color = Color(0, 0, 0, 1)
 
 [node name="FadeOutLayer" parent="." instance=ExtResource("10_6b45u")]
 visible = false
