@@ -1,9 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://dgtsoi5um8ccs"]
+[gd_scene load_steps=10 format=3 uid="uid://dgtsoi5um8ccs"]
 
 [ext_resource type="Script" path="res://scripts/castle.gd" id="1_np3ig"]
 [ext_resource type="Texture2D" uid="uid://bci30866dacvk" path="res://assets/map/Sample.png" id="2_5vb65"]
 [ext_resource type="Texture2D" uid="uid://c5uuwmcfwiyjl" path="res://assets/map/kenney_platformer-pack-medieval/Tilesheet/medieval_tilesheet.png" id="3_ymvvh"]
 [ext_resource type="Texture2D" uid="uid://bi134ue5dlcxk" path="res://assets/player/bullet.png" id="4_x4y17"]
+[ext_resource type="Texture2D" uid="uid://gk2ea6thhk7i" path="res://assets/IU/heart.png" id="5_x40jd"]
 
 [sub_resource type="Gradient" id="Gradient_24681"]
 offsets = PackedFloat32Array(0, 0.339623, 0.509434, 0.990566)
@@ -4638,14 +4639,6 @@ position = Vector2(2, 0)
 scale = Vector2(0.5, 0.5)
 polygon = PackedVector2Array(-396, 304, -402, 60, -456, 34, -452, 2, -410, 2, -398, -74, -318, -176, -236, -68, -170, 10, -156, 18, 76, 14, 100, -6, 148, -66, 174, -74, 198, -76, 280, -178, 362, -72, 378, 306)
 
-[node name="Heart" type="Label" parent="."]
-offset_left = -32.0
-offset_top = 32.0
-offset_right = 26.0
-offset_bottom = 90.0
-theme_override_font_sizes/font_size = 36
-text = "❤"
-
 [node name="Lifebar" type="TextureProgressBar" parent="."]
 z_index = 11
 offset_left = -123.0
@@ -4685,5 +4678,10 @@ texture = ExtResource("4_x4y17")
 position = Vector2(146, 57)
 scale = Vector2(0.265, 0.265)
 texture = ExtResource("4_x4y17")
+
+[node name="Heart" type="Sprite2D" parent="."]
+position = Vector2(-10, 48)
+scale = Vector2(2.2, 2.2)
+texture = ExtResource("5_x40jd")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
