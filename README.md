@@ -9,3 +9,6 @@ O jogo Defenders Lovers foi desenvolvido durante uma game jam de uma semana com 
 > * **GDScript:** A linguagem de programação utilizada na engine.
 > * **Git/GitHub:** Utilizados para armezanar o código.
 > * **Notion:** Utilizado para a documentação do projeto.
+
+> # 💻 VEJA O PROJETO
+> 
