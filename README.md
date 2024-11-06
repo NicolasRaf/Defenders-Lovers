@@ -10,5 +10,11 @@ O jogo Defenders Lovers foi desenvolvido durante uma game jam de uma semana com 
 > * **Git/GitHub:** Utilizados para armezanar o código.
 > * **Notion:** Utilizado para a documentação do projeto.
 
-> # 💻 VEJA O PROJETO
-> 
+> # 💻 [VEJA O PROJETO](https://nicolasraf.itch.io/defenders-lovers)
+> <img src="defendersloversimagem.png">
+
+> # 🔗 CLONE DO PROJETO
+> ``` bash
+> git clone https://github.com/NicolasRaf/Defenders-Lovers.git
+
+> # 📱 CONTATO
